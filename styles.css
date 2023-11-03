@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&family=Montserrat:wght@100;200;400;600&display=swap');
+
+/*Margin é espaçamento externo e padding é um espaçamento interno!*/
+
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #4d88d0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal {
+    background-image: url("imagens/Background.png");
+    background-repeat: no-repeat; /*Quando a altura foi definida em 100vh a imagem se repetiu por toda a pagina, essa propriedade impede que isso aconteça*/
+    background-size: contain; /*O tamanho do background fica no tamanho certo para a página*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /*Divide a pagina em duas, se fosse três valores seria em três e assim por diante*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 1px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao_titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao_titulo_paragrafo {
+    color: var(--cinza-secundario);
+}
+
+.secundario_botao {
+    display: inline-block; /*Pega as melhores partes da linha, caso houvesse outro elemento embaixo aconteceria a junção dos elementos*/
+    margin-top: 1em;
+}
+
+.container_descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*Tira o xiribits*/
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center; /*isso aqui ajuda muita coisa!*/
+    margin: 5em 3em;
+}
+
+.rodape__logo {
+    margin-bottom: 1em;
+}
+
+.rodape__subtitulos {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1.2em;
+    margin-top: 0.5em;
+}
+
+.rodape_links {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    text-align: center;
+    margin: 2em 2em 1em 2em;
+}
+
+.rodape__subtitulos a:hover {
+    color: var(--botao-azul);
+}
+
+.rodape__subtitulos a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
